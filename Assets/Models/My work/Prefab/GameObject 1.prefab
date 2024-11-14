@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1822442809713308431
+--- !u!1 &8374602663625134186
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,57 +8,56 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4883337941216145118}
-  - component: {fileID: 4978636998024826142}
-  - component: {fileID: 3387523337870453607}
-  - component: {fileID: 6786093646069002513}
-  - component: {fileID: 5197773775527516953}
+  - component: {fileID: 1277537748807738969}
+  - component: {fileID: 7518833329871873970}
+  - component: {fileID: 8958008578080139306}
+  - component: {fileID: 4446443753319386618}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObject 1
   m_TagString: magician_rio_unity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4883337941216145118
+--- !u!4 &1277537748807738969
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822442809713308431}
+  m_GameObject: {fileID: 8374602663625134186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 8.02055, y: 8.02055, z: 8.02055}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7802546196070377883}
+  - {fileID: 3017920067071483664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4978636998024826142
+--- !u!114 &7518833329871873970
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822442809713308431}
-  m_Enabled: 0
+  m_GameObject: {fileID: 8374602663625134186}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20f964e38d2b72a41af979972dd93243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  Healthbarfill: {fileID: 146913809444205748}
---- !u!95 &3387523337870453607
+  Healthbarfill: {fileID: 5161135582332404287}
+--- !u!95 &8958008578080139306
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822442809713308431}
+  m_GameObject: {fileID: 8374602663625134186}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 16dabcebef705c744937c9f4f9fddff0, type: 2}
@@ -72,13 +71,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!136 &6786093646069002513
+--- !u!136 &4446443753319386618
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822442809713308431}
+  m_GameObject: {fileID: 8374602663625134186}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -95,26 +94,13 @@ CapsuleCollider:
   m_Height: 1000
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5197773775527516953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822442809713308431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aab07c90b75d1d4a881f3ec22f92925, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabTag: magician_rio_unity
---- !u!1001 &651953180003751449
+--- !u!1001 &5523044637054820498
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4883337941216145118}
+    m_TransformParent: {fileID: 1277537748807738969}
     m_Modifications:
     - target: {fileID: 794254911830893229, guid: 4f921841652301b4eba903bbccaca44e, type: 3}
       propertyPath: m_FillOrigin
@@ -169,10 +155,15 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f921841652301b4eba903bbccaca44e, type: 3}
---- !u!114 &146913809444205748 stripped
+--- !u!4 &3017920067071483664 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7296963457110704002, guid: 4f921841652301b4eba903bbccaca44e, type: 3}
+  m_PrefabInstance: {fileID: 5523044637054820498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5161135582332404287 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 794254911830893229, guid: 4f921841652301b4eba903bbccaca44e, type: 3}
-  m_PrefabInstance: {fileID: 651953180003751449}
+  m_PrefabInstance: {fileID: 5523044637054820498}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -180,8 +171,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7802546196070377883 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7296963457110704002, guid: 4f921841652301b4eba903bbccaca44e, type: 3}
-  m_PrefabInstance: {fileID: 651953180003751449}
-  m_PrefabAsset: {fileID: 0}

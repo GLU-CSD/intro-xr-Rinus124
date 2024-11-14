@@ -124,15 +124,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e054e6d641c7491439e681b7ee62085b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.1955
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e054e6d641c7491439e681b7ee62085b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.1955
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e054e6d641c7491439e681b7ee62085b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.1955
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e054e6d641c7491439e681b7ee62085b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -407,6 +407,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e054e6d641c7491439e681b7ee62085b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2936335906879558940}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e054e6d641c7491439e681b7ee62085b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3176925325733253725}
   m_SourcePrefab: {fileID: 100100000, guid: e054e6d641c7491439e681b7ee62085b, type: 3}
 --- !u!4 &7296963457110704002 stripped
 Transform:
@@ -462,3 +465,16 @@ CapsuleCollider:
   m_Height: 2.4
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-3176925325733253725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7930791900664472888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aab07c90b75d1d4a881f3ec22f92925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabTag: magician_rio_unity
