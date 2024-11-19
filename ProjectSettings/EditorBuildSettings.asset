@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/AR_Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VR_Scene.unity
     guid: 1261e77bc889047c68d8c2d45f289426
-  - enabled: 1
+  - enabled: 0
     path: Assets/Backup1.unity
     guid: 40092ec034d31fa46901507872c41e10
   m_configObjects:

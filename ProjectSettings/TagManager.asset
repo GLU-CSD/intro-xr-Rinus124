@@ -8,6 +8,7 @@ TagManager:
   - Base
   - Terrain
   - magician_rio_unity
+  - BaseAttack
   layers:
   - Default
   - TransparentFX
