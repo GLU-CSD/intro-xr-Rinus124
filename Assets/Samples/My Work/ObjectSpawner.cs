@@ -1,18 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject objectToSpawn;
+    public float spawnInterval = 5f;
 
-    // Update is called once per frame
+    private float lastSpawnTime;
+
+
     void Update()
     {
-        
+        if(Time.time >= lastSpawnTime + spawnInterval)
+        {
+            SpawnObject();
+            lastSpawnTime = Time.time;
+        }
+    }
+
+    void SpawnObject()
+    {
+        if(objectToSpawn != null && spawnInterval != null)
+        {
+            Instantiate(objectToSpawn, transform.position, transform.rotation);
+        }
+        else
+        {
+            Debug.LogWarning("Object or Location is not set!");
+        }
     }
 }
