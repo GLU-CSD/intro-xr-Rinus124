@@ -1,6 +1,6 @@
 
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class ExplodeOnImpact : MonoBehaviour
 {
@@ -8,19 +8,15 @@ public class ExplodeOnImpact : MonoBehaviour
     public float explosionRadius = 5f;
     public float maxHealth = 100f;
     public float currentHealth;
-    public Image Healthbarfill;
+    private Health healthScript = null;
 
-    void Start()
-    {
-        currentHealth = maxHealth;
-        UpdateHealthbar();
-    }
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Explode();
             Destroy(gameObject);
+            TakeDamage(collision.gameObject, 50);
         }
     }
 
@@ -34,20 +30,20 @@ public class ExplodeOnImpact : MonoBehaviour
             if (rb != null)
             {
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+
+                if (nearbyObject.gameObject.CompareTag("Enemy"))
+                {
+                    TakeDamage(nearbyObject.gameObject, 10);
+                }
             }
         }
-    } 
-    
-    //!!!!
-    void HealthImpact(float amount)
-    {
-        GetComponent<Health>();
-        currentHealth -= amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHealthbar();
     }
-    void UpdateHealthbar()
+
+    void TakeDamage(GameObject enemy, int damage)
     {
-        Healthbarfill.fillAmount = currentHealth / maxHealth;
+        healthScript = enemy.GetComponent<Health>();
+        healthScript.TakeDamage(damage);
     }
+
 }
+
