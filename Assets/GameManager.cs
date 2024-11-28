@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Debug.Log("ending game");
         gameActive = false;
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");

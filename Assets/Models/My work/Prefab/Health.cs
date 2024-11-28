@@ -5,9 +5,6 @@ using UnityEngine.UI;
 //Start van het gehele script met de naam van het script zelf
 public class Health : MonoBehaviour
 {
-    /// <summary>
-    ///  variabelen
-    /// </summary>
     public float maxHealth = 100f;
     public float currentHealth;
     public Image Healthbarfill;
@@ -31,6 +28,11 @@ public class Health : MonoBehaviour
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthbar();
+
+        if(currentHealth <= 0)
+        {
+            Death();
+        }
     }
 
     //wanneer er op de Health button wordt geklikt (public functie dus die kan worden terug gevonden)
@@ -39,5 +41,10 @@ public class Health : MonoBehaviour
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthbar();
+    }
+
+    public void Death()
+    {
+       Destroy(gameObject, 0.1f);
     }
 }

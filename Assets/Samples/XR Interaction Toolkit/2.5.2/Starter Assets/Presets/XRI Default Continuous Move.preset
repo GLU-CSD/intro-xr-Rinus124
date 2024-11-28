@@ -30,7 +30,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MoveSpeed
-    value: 1
+    value: 30
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_EnableStrafe
@@ -46,7 +46,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_GravityApplicationMode
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_ForwardSource

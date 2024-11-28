@@ -15,6 +15,7 @@ public class BaseState : MonoBehaviour
             {
                 if(health.currentHealth <= 0)
                 {
+                    Debug.Log("base destroyed");
                     gameManager.GameOver();
                     Destroy(gameObject);
                 }

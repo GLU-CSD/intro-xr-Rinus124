@@ -34,6 +34,12 @@ public class TowerAttack : MonoBehaviour
 
         foreach (Transform enemy in enemiesInRange)
         {
+            if(enemy == null)
+            {
+                enemiesInRange.Remove(enemy);
+                break;
+            }
+
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.position);
             if(distanceToEnemy < shortestDistance)
             {

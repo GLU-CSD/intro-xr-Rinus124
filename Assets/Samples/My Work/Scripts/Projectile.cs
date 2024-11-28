@@ -1,4 +1,5 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,9 +8,7 @@ public class Projectile : MonoBehaviour
     public float speed = 10f;
     public float damage = 50f;
     private Transform target;
-    public float maxHealth = 100f;
-    public float currentHealth;
-    private Health healthScript = null;
+    private Health enemy1;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -17,7 +16,6 @@ public class Projectile : MonoBehaviour
         {
             Explode();
             Destroy(gameObject);
-            TakeDamage(collision.gameObject, 50);
         }
     }
     public void SetTarget(Transform newTarget)
@@ -36,7 +34,7 @@ public class Projectile : MonoBehaviour
         Vector3 direction = (target.position - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, target.position) < 0.1f)
+        if (Vector3.Distance(transform.position, target.position) < 1f)
         {
            Explode();
         }
@@ -44,12 +42,8 @@ public class Projectile : MonoBehaviour
 
     void Explode()
     {
-        Destroy(gameObject);
-    }
+        target.GetComponent<Health>().TakeDamage(damage);
 
-    void TakeDamage(GameObject enemy, int damage)
-    {
-        healthScript = enemy.GetComponent<Health>();
-        healthScript.TakeDamage(damage);
+        Destroy(gameObject);
     }
 }
