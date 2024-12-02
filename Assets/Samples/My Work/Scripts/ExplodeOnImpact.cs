@@ -9,14 +9,21 @@ public class ExplodeOnImpact : MonoBehaviour
     public float maxHealth = 100f;
     public float currentHealth;
     private Health healthScript = null;
+    public AudioSource PlaySound;
+    public ParticleSystem Particles = null;
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Explode();
-            Destroy(gameObject);
             TakeDamage(collision.gameObject, 50);
+            Destroy(gameObject, 5f); // wachten met destroy tot geluid en particle klaar zijn
+            if(Particles != null)
+            {
+                Debug.Log("Ark");
+            }
+            
         }
     }
 
@@ -30,6 +37,7 @@ public class ExplodeOnImpact : MonoBehaviour
             if (rb != null)
             {
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+                
 
                 if (nearbyObject.gameObject.CompareTag("Enemy"))
                 {
@@ -41,9 +49,11 @@ public class ExplodeOnImpact : MonoBehaviour
 
     void TakeDamage(GameObject enemy, int damage)
     {
+        // MeshRenderer uit zetten
+        Particles.Play();
+        PlaySound.Play();
         healthScript = enemy.GetComponent<Health>();
         healthScript.TakeDamage(damage);
     }
-
 }
 
